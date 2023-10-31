@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+{% extends "pattern_page.html" %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+      <link href=”http://cdn.pydata.org/bokeh/release/bokeh-3.0.3.min.css" rel=”stylesheet” type=”text/css”>
+      <link href=”http://cdn.pydata.org/bokeh/release/bokeh-widgets-3.0.3.min.css"
+         rel=”stylesheet” type=”text/css”>
+
+</head>
+
+<body>
+<div align = "center">
+    {% block content %}
+<h2>Weather in {{ city_name }}, {{ city_country }}:</h2>
+    {{ div| safe }}
+
+</div>
+<br>
+
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-3.0.3.min.js"></script>
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.0.3.min.js"></script>
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-tables-3.0.3.min.js"></script>
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-gl-3.0.3.min.js"></script>
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-mathjax-3.0.3.min.js"></script>
+
+    {{ script| safe }}
+
+{% endblock %}
+</div>
+</body>
+</html>

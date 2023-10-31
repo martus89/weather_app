@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+
+{% extends "pattern_page.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+{% block content %}
+
+<div class="mb-3 col-sm-3 align-items-center" id="search_area">
+    <form method="POST" style="color:#85586F;border:#85586F;" >
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit" id="search-btn" class="btn btn-primary" name="check" style=background-color:#85586F;border:#85586F>Check</button>
+    </form>
+</div>
+
+{% endblock %}
+
+</body>
+</html>
